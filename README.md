@@ -100,7 +100,3 @@ Enter a role/skill → Click **Generate Questions** → See technical & behavior
 ## 📜 License
 
 MIT License © [Hadia Waheed]
-
-
-
-Do you want me to do that next?
