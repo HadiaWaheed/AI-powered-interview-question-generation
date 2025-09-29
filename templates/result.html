@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="questions-section">
+    <h2>Interview Questions for <span class="highlight">{{ role }}</span></h2>
+
+    <!-- Technical Questions -->
+    {% if questions.technical %}
+    <div class="card">
+        <h3>⚙️ Technical Questions</h3>
+        <ul class="question-list">
+            {% for q in questions.technical %}
+            <li><span class="q-number">{{ loop.index }}.</span> {{ q }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <!-- Behavioral Questions -->
+    {% if questions.behavioral %}
+    <div class="card">
+        <h3>🧠 Behavioral Questions</h3>
+        <ul class="question-list">
+            {% for q in questions.behavioral %}
+            <li><span class="q-number">{{ loop.index }}.</span> {{ q }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <!-- Back Button -->
+    <div class="action-buttons">
+        <a href="/" class="btn btn-primary">⬅ Generate Again</a>
+    </div>
+</div>
+{% endblock %}

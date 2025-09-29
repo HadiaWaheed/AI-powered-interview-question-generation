@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero">
+    <div class="hero-content">
+        <h1>AI-Powered Interview Question Generator</h1>
+        <p>Generate custom <span class="highlight">technical & behavioral</span> questions for any role in seconds!</p>
+        <div class="features">
+            <div class="feature-item">
+                <span>⚡</span>
+                <p>Instant Generation</p>
+            </div>
+            <div class="feature-item">
+                <span>🎯</span>
+                <p>Role-Specific</p>
+            </div>
+            <div class="feature-item">
+                <span>🤖</span>
+                <p>AI-Powered</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Form Section -->
+<div class="form-container">
+    <div class="form-card">
+        <h2>Generate Interview Questions</h2>
+        <p class="form-description">Enter a job role to get customized technical and behavioral questions.</p>
+        
+        <form action="/generate" method="post" class="role-form">
+            <div class="input-group">
+                <label for="role">🎭 Job Role / Position</label>
+                <input 
+                    type="text" 
+                    id="role" 
+                    name="role" 
+                    placeholder="e.g. Data Scientist, Frontend Developer, Marketing Intern, Software Engineer..." 
+                    required
+                    maxlength="100">
+                <small>Enter the specific role you're hiring for</small>
+            </div>
+            
+            <button type="submit" class="generate-btn">
+                <span class="btn-icon">✨</span>
+                Generate Questions
+            </button>
+        </form>
+
+        <!-- Example Roles -->
+        <div class="examples">
+            <h3>💡 Example Roles:</h3>
+            <div class="example-tags">
+                <span class="tag">Data Science Intern</span>
+                <span class="tag">Web Developer</span>
+                <span class="tag">Cybersecurity Analyst</span>
+                <span class="tag">Marketing Coordinator</span>
+                <span class="tag">Product Manager</span>
+                <span class="tag">UX Designer</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About Section -->
+<div id="about" class="about-section">
+    <div class="about-content">
+        <h2>About This Tool</h2>
+        <div class="about-grid">
+            <div class="about-item">
+                <h3>🎯 Purpose</h3>
+                <p>Generate tailored interview questions for intern and entry-level positions quickly and efficiently.</p>
+            </div>
+            <div class="about-item">
+                <h3>🤖 Technology</h3>
+                <p>Powered by Groq AI and LLaMA models for intelligent question generation.</p>
+            </div>
+            <div class="about-item">
+                <h3>⚡ Benefits</h3>
+                <p>Save time, ensure relevance, and maintain consistency in your interview process.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
